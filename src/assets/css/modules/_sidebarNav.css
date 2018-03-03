@@ -23,33 +23,35 @@
   &__footer
   {
   	display:flex;
-  	align-items: center;
-  	position:absolute;
-  	left:0;
-  	bottom:1rem;
-  	text-align: center;
-  	min-height:8rem;
-  	width:100%;
     flex-flow:column nowrap;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
     color:$mediumGrey;
 
-    &__socialmedia
+  	min-height:8rem;
+  	width:100%;
+
+  	position:absolute;
+  	left:0;
+  	bottom:1rem;
+
+    & .socialmedia
     {
-        display:block;
-        list-style-type: none;
+      display:block;
+      list-style-type: none;
 
-        li a img
-        {
-            width:3.5rem;
-            height:3.5rem;
-        }
+      li a img
+      {
+          width:3.5rem;
+          height:3.5rem;
+      }
 
-        li a img:hover
-        {
-            opacity: 0.6;
-        }
+      li a img:hover
+      {
+          opacity: 0.6;
+      }
     }
   }
 
