@@ -60,12 +60,15 @@
 
       & li p
       {
-      	color:$mediumGrey;
+      	color:$neonGreen;
       }
 
+      & li object,
       & li img
       {
       	margin:0 auto 0.5rem auto;
+        width:6rem;
+        height:6rem;
 
         @mixin atSmall
         {

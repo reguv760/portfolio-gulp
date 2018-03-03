@@ -42,15 +42,17 @@
       display:block;
       list-style-type: none;
 
-      li a img
+      li a img,
+      li a object
       {
           width:3.5rem;
           height:3.5rem;
       }
 
-      li a img:hover
+      li a img:hover,
+      li a object:hover
       {
-          opacity: 0.6;
+        opacity: 0.6;
       }
     }
   }

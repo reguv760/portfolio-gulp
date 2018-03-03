@@ -27,7 +27,7 @@
 						<a href="about.html">About</a>
 					</li> -->
 					<li>
-						<a href="#">Resume</a>
+						<a href="#">R&eacute;sum&eacute;</a>
 					</li>
 				</ul>
 			</nav>
@@ -35,7 +35,11 @@
 			<div class="sidebar__footer">
 				<ul class="socialmedia">
           <li>
-						<a href="#"><img src="./assets/icons/linkedIn.svg"/></a>
+						<a href="#">
+							<object type="image/svg+xml" class="icon icon--linkedIn">
+								<img class="icon--linkedIn" src="./assets/icons/linkedIn.svg"/> <!-- fallback image in CSS -->
+							</object>
+						</a>
 					</li>
         </ul>
 				<div class="sidebar__footerText">
@@ -53,7 +57,9 @@
 			<ul class="mobileNav__links">
 				<li>
 					<a href="#" class="active_link">
-						<img src="./assets/icons/portfolio.svg">
+						<object type="image/svg+xml" data="./assets/icons/portfolio.svg" class="icon icon--portfolio">
+							<!-- <img src="./assets/icons/portfolio.svg"> -->
+						</object>
 						<p>Projects</p>
 					</a>
 				</li>
@@ -65,8 +71,10 @@
 				</li> -->
 				<li>
 					<a href="#">
-						<img src="./assets/icons/resume.svg">
-						<p>Resume</p>
+						<object type="image/svg+xml" data="./assets/icons/resume.svg" class="icon icon--resume">
+							<!-- <img src="./assets/icons/resume.svg"> -->
+						</object>
+						<p>R&eacute;sum&eacute;</p>
 					</a>
 				</li>
 				<!-- <li>
@@ -173,7 +181,13 @@
 			<footer class="pagefooter">
 				<!-- <h1>This is a footer area</h1> -->
         <ul class="pagefooter__socialmedia">
-            <li><a href="#"><img src="./assets/icons/linkedIn.svg"/></a></li>
+            <li>
+							<a href="#">
+								<object type="image/svg+xml" class="icon icon--linkedIn">
+								  <img class="icon--linkedIn" src="./assets/icons/linkedIn.svg"/> <!-- fallback image in CSS -->
+								</object>
+							</a>
+						</li>
         </ul>
         <p>Site uses CSS Grid + Flexbox</p>
         <p>Site updated: 3.2.18</p>

@@ -23,7 +23,7 @@ const config = {
 };
 
 gulp.task('beginClean', () =>
-  del(['./src/temp/sprite', './src/assets/sprites/**/*.svg'])
+  del(['./src/temp/sprite', './src/assets/sprite/**/*.svg'])
 );
 
 gulp.task('createSprite', ['beginClean'], () =>
@@ -39,7 +39,7 @@ gulp.task('createSprite', ['beginClean'], () =>
 gulp.task('copySpriteGraphic', () =>
   gulp
     .src('./src/temp/sprite/css/**/*.{svg,png}')
-    .pipe(gulp.dest('./src/assets/sprites'))
+    .pipe(gulp.dest('./src/assets/sprite'))
 );
 
 gulp.task('copySpriteCSS', ['createSprite'], () =>
@@ -61,6 +61,5 @@ gulp.task('icons', [
   'beginClean',
   'createSprite',
   'copySpriteGraphic',
-  'copySpriteCSS',
-  'endClean'
+  'copySpriteCSS'
 ]);

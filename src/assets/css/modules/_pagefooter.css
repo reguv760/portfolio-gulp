@@ -28,7 +28,7 @@
 
       li a img:hover
       {
-        border:1px solid $subtleWhite;
+        opacity:0.6;
       }
 
       li a img
