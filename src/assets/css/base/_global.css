@@ -11,7 +11,7 @@ body
 	margin:0;
 	padding:0;
 	font-size:1.6rem;
-	color:$off-black;
+	background-color: $off-black;
 
   display:grid;
   grid-template-columns: 20rem 1fr 1fr 1fr;

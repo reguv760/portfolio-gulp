@@ -23,10 +23,12 @@ gulp.task('watch', () => {
 
   watch('./src/assets/css/**/*.css', () => {
     gulp.start('cssInject');
+    browserSync.reload();
   });
 
   // watch for any changes to our js files
   watch('./src/assets/js/**/*.js', () => {
     gulp.start('scriptsRefresh');
+    browserSync.reload();
   });
 });

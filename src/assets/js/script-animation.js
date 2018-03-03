@@ -9,12 +9,13 @@ window.onload = function()
   //TweenMax.to(mobileNav, 1, {opacity:1, ease:Circ.easeOut,});
 
   // var images = document.getElementsByTagName('img');
-  // console.log(images.length);
+  //console.log(images.length);
   // for (var i = 0; i < images.length; i++)
   // {
+  //   console.log(images[i].src);
   //   if (getFileExtension(images[i].src) === "jpg")
   //   {
-  //     console.log(images[i]);
+  //     console.log(images[i]).src;
   //   }
   // }
 

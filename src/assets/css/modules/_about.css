@@ -38,6 +38,6 @@
   	width:20rem;
   	height:20rem;
   	margin:0.5rem 1rem 1rem 0;
-  	background-color: #off-black;
+  	background-color: $off-black;
   }
 }

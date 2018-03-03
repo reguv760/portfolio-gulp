@@ -3,7 +3,7 @@
     display:none;
     flex-flow: row nowrap;
     grid-area: mobileNav;
-    background-color:$off-white;
+    background-color:$off-black;
     justify-content: space-around;
     position: fixed;
     z-index: 1000;
@@ -18,7 +18,7 @@
     {
         height:12.5rem;
         width:15rem;
-        background-color:$off-black;
+        /* background-color:$off-black; */
 
         @mixin atTablet
         {
@@ -48,6 +48,7 @@
       {
         flex-flow: row nowrap;
     		justify-content: space-around;
+    	  margin:0 auto ;
         width:60%;
       }
 
@@ -55,6 +56,11 @@
       {
       	margin:0.5rem auto;
       	height:6rem;
+      }
+
+      & li p
+      {
+      	color:$mediumGrey;
       }
 
       & li img

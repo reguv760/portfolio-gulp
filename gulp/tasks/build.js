@@ -45,8 +45,9 @@ gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
     interlaced: true,
     multipass: true
   }))
-  
-  .pipe(gulp.dest('./dist/assets/images')));
+
+  .pipe(gulp.dest('./dist/assets/img'))
+);
 
 gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
   .src('./src/index.html')
@@ -56,6 +57,7 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
       return uglify();
     }]
   }))
-  .pipe(gulp.dest('./dist')));
+  .pipe(gulp.dest('./dist'))
+);
 
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin']);

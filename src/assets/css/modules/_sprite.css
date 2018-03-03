@@ -1,6 +1,6 @@
-    .icon {
-      background-image: url('/assets/sprite/css/sprite-a3903019.svg');
-    }
+  .icon {
+    background-image: url('./temp/sprite/css/sprite-a3903019.svg');
+  }
 
   .icon--about {
     width: 502px;

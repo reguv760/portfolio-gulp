@@ -5,6 +5,7 @@
     width:100%;
     justify-content: center;
     align-items: center;
+    margin:2rem 0;
 
     @mixin atTablet
     {
@@ -27,19 +28,20 @@
 
       li a img:hover
       {
-        border:1px solid #ccc;
+        border:1px solid $subtleWhite;
       }
 
       li a img
       {
-        width:5rem;
-        height:5rem;
+        width:3.5rem;
+        height:3.5rem;
       }
     }
 
     & p
     {
-        font-size: 1.4rem;
-        margin:0.5rem auto;
+      color:$mediumGrey;
+      font-size: 1.4rem;
+      margin:0.5rem auto;
     }
 }

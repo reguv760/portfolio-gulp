@@ -15,6 +15,7 @@ container pagination
   	font-weight: 500;
   	color: $subtleWhite;
 
+
     & li
     {
     	display:inline-block;
@@ -23,11 +24,15 @@ container pagination
     & li a
     {
     	text-decoration:none;
-    	color:$darkGreen;
+    	color:$mediumGrey;
     }
 
-    & li a.active_link,
-    & li a:hover
+		& li a:hover
+		{
+			color:$darkGrey;
+		}
+
+    & li a.active_link
     {
       color:$brightGreen;
     }

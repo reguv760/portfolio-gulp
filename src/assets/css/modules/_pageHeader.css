@@ -2,6 +2,7 @@
 {
   grid-area:rightCol;
   width:100%;
+  background-color: $off-black;
 
   & header
   {
@@ -9,12 +10,13 @@
      align-items: center;
      width:100%;
      min-height: 15rem;
-     background-color: $off-white;
+     background-color: $off-black;
   }
 
   & section
   {
-      width:100%;
+    width:100%;
+    background-color: $off-black;
   }
 
   &__header
@@ -24,6 +26,7 @@
 
     & p
     {
+      color:$subtleWhite;
     	font-size:2.1rem;
     	line-height: 3rem;
     	margin:1rem;
@@ -31,6 +34,7 @@
       @mixin atSmall
       {
         font-size: 1.8rem;
+      	line-height: 2.4rem;
       }
     }
 
@@ -42,7 +46,7 @@
 
     & a:hover
     {
-    	color:$brightGreen;
+    	color:$darkGrey;
     }
   }
 }
