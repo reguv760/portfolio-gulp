@@ -1,0 +1,45 @@
+.pagefooter
+{
+    display:none;
+    flex-flow: column nowrap;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+    @mixin atTablet
+    {
+      display:flex;
+    }
+
+    &__socialmedia
+    {
+      display:block;
+
+      li
+      {
+        margin:1rem auto;
+      }
+
+      li a
+      {
+        text-decoration: none;
+      }
+
+      li a img:hover
+      {
+        border:1px solid #ccc;
+      }
+
+      li a img
+      {
+        width:5rem;
+        height:5rem;
+      }
+    }
+
+    & p
+    {
+        font-size: 1.4rem;
+        margin:0.5rem auto;
+    }
+}

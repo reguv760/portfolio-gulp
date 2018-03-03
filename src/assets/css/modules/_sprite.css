@@ -1,0 +1,33 @@
+    .icon {
+      background-image: url('/assets/sprite/css/sprite-a3903019.svg');
+    }
+
+  .icon--about {
+    width: 502px;
+    height: 502px;
+    background-position: 0 0;
+  }
+
+  .icon--experiment {
+    width: 502px;
+    height: 502px;
+    background-position: 50% 0;
+  }
+
+  .icon--linkedIn {
+    width: 502px;
+    height: 502px;
+    background-position: 0 100%;
+  }
+
+  .icon--portfolio {
+    width: 502px;
+    height: 502px;
+    background-position: 50% 100%;
+  }
+
+  .icon--resume {
+    width: 502px;
+    height: 502px;
+    background-position: 100% 0;
+  }

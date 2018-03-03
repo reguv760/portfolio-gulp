@@ -1,0 +1,14 @@
+/* ============== Mobile First Media Queries ====== */
+/* Extra Small Devices, Phones */
+@define-mixin atSmall {
+  @media (max-width: 480px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atTablet
+{
+  @media (max-width: 799px) {
+    @mixin-content;
+  }
+}

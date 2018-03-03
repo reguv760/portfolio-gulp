@@ -1,0 +1,14 @@
+node_modules/
+src/temp/*/**
+dist
+gulp
+
+# OS or Editor folders
+.DS_Store
+
+# Don't save vim .swp files
+*.swp
+
+# Adobe Files
+*.ai
+*.psd

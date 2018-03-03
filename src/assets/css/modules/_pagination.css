@@ -1,0 +1,45 @@
+/* =================
+container pagination
+==================== */
+.pagination
+{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin:1rem auto;
+
+  &__container
+  {
+  	list-style-type: none;
+  	font-size:1.8rem;
+  	font-weight: 500;
+  	color: $subtleWhite;
+
+    & li
+    {
+    	display:inline-block;
+    }
+
+    & li a
+    {
+    	text-decoration:none;
+    	color:$darkGreen;
+    }
+
+    & li a.active_link,
+    & li a:hover
+    {
+      color:$brightGreen;
+    }
+
+    li::after
+    {
+    	content:" | ";
+    }
+
+    li:last-child::after
+    {
+    	content:"";
+    }
+  }
+}

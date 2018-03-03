@@ -1,0 +1,90 @@
+.mobileNav
+{
+    display:none;
+    flex-flow: row nowrap;
+    grid-area: mobileNav;
+    background-color:$off-white;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1000;
+    width:100%;
+
+    @mixin atTablet
+    {
+      display: flex;
+    }
+
+    &__logo
+    {
+        height:12.5rem;
+        width:15rem;
+        background-color:$off-black;
+
+        @mixin atTablet
+        {
+          height:15rem;
+          width:18rem;
+        }
+
+        @mixin atSmall
+        {
+          width:12rem;
+          height:10rem;
+        }
+    }
+
+    &__links
+    {
+      display:flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      list-style-type: none;
+  		position: relative;
+  	  margin:0 auto 1rem auto;
+
+      @mixin atSmall
+      {
+        flex-flow: row nowrap;
+    		justify-content: space-around;
+        width:60%;
+      }
+
+      & li
+      {
+      	margin:0.5rem auto;
+      	height:6rem;
+      }
+
+      & li img
+      {
+      	margin:0 auto 0.5rem auto;
+
+        @mixin atSmall
+        {
+          width:4rem;
+      		height:4rem;
+        }
+      }
+    }
+
+    & li a
+    {
+        text-align: center;
+        text-decoration: none;
+        color:$off-black;
+        font-size: 1.4rem;
+        letter-spacing: 0.0125em;
+
+        @mixin atSmall
+        {
+          font-size: 1.1rem;
+        }
+    }
+
+    & li a:hover
+    {
+    	opacity: 0.6;
+    }
+}

@@ -1,0 +1,159 @@
+.portfolio
+{
+  margin:2rem;
+  padding:2rem 0;
+  background-color: $subtleWhite;
+  border:1px solid #999;
+  border-radius: 2rem;
+  min-height: 15rem;
+
+  & h2
+  {
+    color:$mediumGrey;
+    font-size:2.8rem;
+    font-weight: 700;
+    letter-spacing: 0.0125em;
+    padding:0.5rem 2rem 0.5rem 4rem;
+    background-color:$off-white;
+
+    @mixin atSmall
+    {
+      font-size:2rem;
+    }
+  }
+
+  /* used for website items */
+  &__website
+  {
+  	width:90%;
+  	min-height:10rem;
+  	margin:1rem auto;
+  }
+
+  &__website img
+  {
+  	border-radius: 0.5rem;
+  	filter:drop-shadow(1px 1px 1px rgba(0,0,0, 0.5));
+  }
+
+  &__website-container
+  {
+  	display:flex;
+  	flex-flow: row wrap;
+  	justify-content:flex-start;
+
+    li
+    {
+    	margin:1rem;
+    }
+  }
+
+  /* used by websites with hero + smaller images */
+  &__website-container--hero
+  {
+  	width:100%;
+
+    @mixin atSmall
+    {
+      width:100%;
+    }
+  }
+
+  &__website-container--subcontent
+  {
+  	width:20%;
+
+    @mixin atTablet
+    {
+      width:30%;
+    }
+
+    @mixin atSmall
+    {
+      width:35%;
+    }
+  }
+
+  &__website--mobile
+  {
+  	object-fit:fill;
+  }
+
+  /* used by website with one large hero image */
+  &__website-container--fullWidth
+  {
+  	width:100%;
+  }
+
+  /* gallery for multiple images per project */
+  &__gallery-container
+  {
+  	display:flex;
+  	flex-flow: row wrap;
+  	justify-content: flex-start;
+  	width:90%;
+  	margin:2rem auto;
+
+    li
+    {
+    	width:12rem;
+    	height:12rem;
+    	background-color:#333;
+    	margin:1rem;
+
+      @mixin atTablet
+      {
+        width:10rem;
+        height:10rem;
+      }
+
+      @mixin atSmall
+      {
+        width:7rem;
+    		height:7rem;
+    		margin:0.25rem;
+      }
+    }
+  }
+
+  /* text container */
+  &__textContainer
+  {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin:2rem auto;
+    width:85%;
+
+    @mixin atSmall
+    {
+      font-size: 1.6rem;
+  		line-height: 1.8rem;
+    }
+
+    & p
+    {
+      margin:2rem 0 4rem 0;
+      line-height: 1.6em;
+    }
+  }
+
+  &__link
+  {
+  	cursor: pointer;
+  	background-color: $darkGreen;
+  	border-radius: 0.5rem;
+  	padding:1rem;
+
+    a
+    {
+      text-decoration: none;
+      color:$off-white;
+      letter-spacing: 0.025em;
+    }
+  }
+
+  &__link:hover
+  {
+  	background-color:$neonGreen;
+  }
+}

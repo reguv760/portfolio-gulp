@@ -1,0 +1,97 @@
+.sidebar
+{
+  display: block;
+  grid-area:leftCol;
+  height:100vh;
+  width:20rem;
+  background-color:$off-white;
+  position:fixed;
+
+  @mixin atTablet
+  {
+    display:none;
+  }
+
+  &__logo
+  {
+    width:100%;
+    height:15rem;
+    background-color:#990099;
+    margin:0 0 1rem 0;
+  }
+
+  /* side bar footer */
+  &__footer
+  {
+  	display:flex;
+  	align-items: center;
+  	position:absolute;
+  	left:0;
+  	bottom:1rem;
+  	/* background-color:#669900; */
+  	text-align: center;
+  	min-height:8rem;
+  	width:100%;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    & .socialmedia
+    {
+        display:block;
+        list-style-type: none;
+
+        li a img
+        {
+            width:3.5rem;
+            height:3.5rem;
+        }
+
+        li a img:hover
+        {
+            opacity: 0.6;
+        }
+    }
+  }
+
+  &__footerText p
+  {
+  	margin:0.5rem;
+  	font-size: 1.4rem;
+  }
+
+  /* sidebar nav */
+  &__nav
+  {
+    display:block;
+    list-style-type: none;
+		position: relative;
+	  margin:0 auto 1rem auto;
+    width:75%;
+
+    & li
+    {
+      width:100%;
+      margin:0 auto 1rem auto;
+    }
+
+    & li a
+    {
+      color:#9f9f9f;
+      font-size:2.4rem;
+  		font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0.0125em;
+    }
+
+    & li a:hover
+    {
+    	color:$darkGrey;
+    }
+
+    & li a.active_link
+    {
+    	color:$off-black;
+    }
+  }
+}

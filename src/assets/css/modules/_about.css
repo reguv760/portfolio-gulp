@@ -1,0 +1,43 @@
+.about
+{
+	margin:2rem;
+  padding:2rem 0;
+	background-color: $subtleWhite;
+	border:1px solid #999;
+	border-radius: 2rem;
+	min-height: 15rem;
+
+  & h2
+  {
+    font-size:2.8rem;
+    font-weight: 700;
+    letter-spacing: 0.0125em;
+    padding:0.5rem 2rem 0.5rem 4rem;
+    background-color:$off-white;
+  }
+
+  &__textContainer
+  {
+  	font-size: 1.8rem;
+  	line-height: 2rem;
+  	margin:2rem auto;
+  	width:85%;
+    position: relative;
+
+    & p
+    {
+    	margin:2rem 0 4rem 0;
+      line-height: 1.6em;
+    }
+  }
+
+  &__imageContainer
+  {
+  	float: left;
+  	position: relative;
+  	width:20rem;
+  	height:20rem;
+  	margin:0.5rem 1rem 1rem 0;
+  	background-color: #off-black;
+  }
+}
