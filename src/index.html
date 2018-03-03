@@ -9,7 +9,8 @@
 
 		<link rel="stylesheet" href="./temp/css/style.css">
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<script src="./temp/scripts/app.js"></script>
+
     <title></title>
 	</head>
 
@@ -111,13 +112,13 @@
 					<div class="portfolio__website">
 						<ul class="portfolio__website-container">
 							<li class="portfolio__website-container--hero">
-								<img src="./assets/img/web/doahu-final.jpg"/>
+								<img class="lazyload" data-src="./assets/img/web/doahu-final.jpg" width="1200" height="624"/>
 							</li>
 							<li class="portfolio__website-container--subcontent">
-								<img class="portfolio__website--mobile" src="./assets/img/web/doahu-iphone6_mockup.jpg"/>
+								<img class="portfolio__website--mobile lazyload" data-src="./assets/img/web/doahu-iphone6_mockup.jpg"/>
 							</li>
 							<li class="portfolio__website-container--subcontent">
-								<img class="portfolio__website--mobile" src="./assets/img/web/doahu-galaxyS7_mockup.jpg"/>
+								<img class="portfolio__website--mobile lazyload" data-src="./assets/img/web/doahu-galaxyS7_mockup.jpg"/>
 							</li>
 						</ul>
 					</div>
@@ -135,7 +136,7 @@
 					<div class="portfolio__website">
 						<ul class="portfolio__website-container">
 							<li class="portfolio__website-container--fullWidth">
-									<img src="./assets/img/web/mywetpaint.jpg"/>
+									<img class="lazyload" data-src="./assets/img/web/mywetpaint.jpg"/>
 							</li>
 						</ul>
 					</div>
@@ -150,7 +151,7 @@
 					<div class="portfolio__website">
 						<ul class="portfolio__website-container">
 							<li class="portfolio__website-container--fullWidth">
-									<img src="./assets/img/web/highgroundmovie.jpg"/>
+									<img class="lazyload" data-src="./assets/img/web/highgroundmovie.jpg"/>
 							</li>
 						</ul>
 					</div>
@@ -187,6 +188,4 @@
 		</div>
 
   </body>
-
-	<script src="./assets/js/script-animation.js"></script>
 </html>

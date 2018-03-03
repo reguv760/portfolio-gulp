@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    App: './src/assets/scripts/App.js',
-    Vendor: './src/assets/scripts/Vendor.js'
+    App: './src/assets/js/app.js',
+    Vendor: './src/assets/js/vendor.js'
   },
   output: {
     path: path.join(__dirname, './src/temp/scripts'),
