@@ -26,22 +26,23 @@
         text-decoration: none;
       }
 
+      li a img
+      {
+        width:4rem;
+        height:4rem;
+      }
+
       li a img:hover
       {
         opacity:0.6;
-      }
-
-      li a img
-      {
-        width:3.5rem;
-        height:3.5rem;
       }
     }
 
     & p
     {
+      font-family: 'Ubuntu Mono', monospace;
       color:$mediumGrey;
       font-size: 1.4rem;
-      margin:0.5rem auto;
+      margin:0.5rem;
     }
 }

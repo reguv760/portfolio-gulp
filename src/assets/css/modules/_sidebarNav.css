@@ -59,9 +59,10 @@
 
   &__footerText p
   {
-  	margin:0.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+  	margin:0.5rem 0;
   	font-size: 1.4rem;
-    line-height: 1.6em;
+    text-align: center;
   }
 
   /* sidebar nav */
@@ -81,6 +82,7 @@
 
     & li a
     {
+      font-family: 'Ubuntu Mono', monospace;
       color:$subtleWhite;
       font-size:2.4rem;
   		font-weight: 500;

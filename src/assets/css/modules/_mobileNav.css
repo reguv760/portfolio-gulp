@@ -42,6 +42,8 @@
       width:100%;
       list-style-type: none;
   		position: relative;
+      top:0;
+      left:0;
   	  margin:0 auto 1rem auto;
 
       @mixin atSmall
