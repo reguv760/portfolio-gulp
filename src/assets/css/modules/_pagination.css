@@ -6,10 +6,11 @@ container pagination
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	margin:1rem auto;
+	margin:1.5rem auto;
 
   &__container
   {
+	  font-family: 'Ubuntu Mono', monospace;
   	list-style-type: none;
   	font-size:1.8rem;
   	font-weight: 500;

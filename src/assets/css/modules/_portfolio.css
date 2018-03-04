@@ -3,8 +3,8 @@
   margin:2rem;
   padding:0 0 2rem 0;
   background-color: $darkGrey;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   min-height: 15rem;
 
   & h2
@@ -33,7 +33,7 @@
 
   &__website img
   {
-  	border-radius: 0.5rem;
+  	border-radius: 0.25rem;
   	filter:drop-shadow(1px 1px 1px rgba(0,0,0, 0.5));
   }
 
