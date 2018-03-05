@@ -1,5 +1,4 @@
 /* ============== Mobile First Media Queries ====== */
-/* Extra Small Devices, Phones */
 @define-mixin atSmall {
   @media (max-width: 480px) {
     @mixin-content;

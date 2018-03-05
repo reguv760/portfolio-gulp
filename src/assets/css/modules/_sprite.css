@@ -1,5 +1,5 @@
     .icon {
-      background-image: url('../sprite/css/sprite-b27d5e56.svg');
+      background-image: url('./assets/sprites/sprite-172779a5.svg');
     }
 
   .icon--about {
@@ -17,8 +17,7 @@
   .icon--github {
     width: 502px;
     height: 502px;
-    background-position: 0 100%
-
+    background-position: 0 100%;
   }
 
   .icon--linkedIn {

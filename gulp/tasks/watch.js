@@ -21,7 +21,14 @@ gulp.task('watch', () => {
     browserSync.reload();
   });
 
+  //css
   watch('./src/assets/css/**/*.css', () => {
+    gulp.start('cssInject');
+    browserSync.reload();
+  });
+
+  //svg
+  watch('./src/assets/icons/**/*.svg', () => {
     gulp.start('cssInject');
     browserSync.reload();
   });

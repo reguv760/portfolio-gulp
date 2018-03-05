@@ -23,7 +23,7 @@ const config = {
 };
 
 gulp.task('beginClean', () =>
-  del(['./src/temp/sprite/**/*.*', './src/assets/sprite/**/*.svg'])
+  del(['./src/temp/sprites/css', './src/temp/sprites', './src/assets/sprites/**/*.svg'])
 );
 
 gulp.task('createSprite', ['beginClean'], () =>
@@ -33,19 +33,19 @@ gulp.task('createSprite', ['beginClean'], () =>
     // use the template var
     .pipe(svgSprite(config))
     // output generated sprite to tmp file
-    .pipe(gulp.dest('./src/temp/sprite'))
+    .pipe(gulp.dest('./src/temp/sprites'))
 );
 
 gulp.task('copySpriteGraphic', ['createSprite'], () =>
   gulp
-    .src('./src/temp/sprite/css/*.{svg,png}')
-    .pipe(gulp.dest('./src/assets/sprite/'))
+    .src('./src/temp/sprites/css/*.{svg,png}')
+    .pipe(gulp.dest('./src/assets/sprites/'))
 );
 
 gulp.task('copySpriteCSS', ['copySpriteGraphic'], () =>
   gulp
     // grab all the sprites generated
-    .src('./src/temp/sprite/css/**/*.css')
+    .src('./src/temp/sprites/css/**/*.css')
     // rename to partial `_sprites`
     .pipe(rename('_sprite.css'))
     // copy file and move copy to modules directory
@@ -54,7 +54,7 @@ gulp.task('copySpriteCSS', ['copySpriteGraphic'], () =>
 
 
 gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], () =>
-  del('./src/temp/sprite/**/*.*')
+  del('./src/temp/sprites/**/*.*', './src/temp/sprites/**' )
 );
 
 gulp.task('icons', [

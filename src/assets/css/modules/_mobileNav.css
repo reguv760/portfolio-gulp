@@ -46,14 +46,6 @@
       left:0;
   	  margin:0 auto 1rem auto;
 
-      @mixin atSmall
-      {
-        flex-flow: row nowrap;
-    		justify-content: space-around;
-    	  margin:0 auto ;
-        width:60%;
-      }
-
       & li
       {
       	margin:0.5rem auto;
@@ -77,6 +69,14 @@
           width:4rem;
       		height:4rem;
         }
+      }
+
+      @mixin atSmall
+      {
+        flex-flow: row nowrap;
+    		justify-content: space-around;
+    	  margin:0 auto ;
+        width:60%;
       }
     }
 
