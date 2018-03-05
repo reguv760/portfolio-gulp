@@ -71,6 +71,11 @@
         }
       }
 
+      & .active_link p
+      {
+        color: $mediumGrey;
+      }
+
       @mixin atSmall
       {
         flex-flow: row nowrap;

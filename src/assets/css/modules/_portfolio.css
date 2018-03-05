@@ -75,7 +75,8 @@
     }
   }
 
-  &__website--mobile
+  &__website--mobile,
+  &__website--tablet
   {
   	object-fit:fill;
   }
