@@ -1,5 +1,5 @@
     .icon {
-      background-image: url('../sprite/css/sprite-48f8e6db.svg');
+      background-image: url('../sprite/css/sprite-b27d5e56.svg');
     }
 
   .icon--about {
@@ -14,20 +14,27 @@
     background-position: 50% 0;
   }
 
-  .icon--linkedIn {
+  .icon--github {
     width: 502px;
     height: 502px;
-    background-position: 0 100%;
+    background-position: 0 100%
+
   }
 
-  .icon--portfolio {
+  .icon--linkedIn {
     width: 502px;
     height: 502px;
     background-position: 50% 100%;
   }
 
-  .icon--resume {
+  .icon--portfolio {
     width: 502px;
     height: 502px;
     background-position: 100% 0;
+  }
+
+  .icon--resume {
+    width: 502px;
+    height: 502px;
+    background-position: 100% 100%;
   }

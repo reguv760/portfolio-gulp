@@ -23,7 +23,7 @@ const config = {
 };
 
 gulp.task('beginClean', () =>
-  del(['./src/temp/sprite', './src/assets/sprite/**/*.svg'])
+  del(['./src/temp/sprite/**/*.*', './src/assets/sprite/**/*.svg'])
 );
 
 gulp.task('createSprite', ['beginClean'], () =>
@@ -36,16 +36,16 @@ gulp.task('createSprite', ['beginClean'], () =>
     .pipe(gulp.dest('./src/temp/sprite'))
 );
 
-gulp.task('copySpriteGraphic', () =>
+gulp.task('copySpriteGraphic', ['createSprite'], () =>
   gulp
-    .src('./src/temp/sprite/css/**/*.{svg,png}')
-    .pipe(gulp.dest('./src/assets/sprite'))
+    .src('./src/temp/sprite/css/*.{svg,png}')
+    .pipe(gulp.dest('./src/assets/sprite/'))
 );
 
-gulp.task('copySpriteCSS', ['createSprite'], () =>
+gulp.task('copySpriteCSS', ['copySpriteGraphic'], () =>
   gulp
     // grab all the sprites generated
-    .src('./src/temp/sprite/css/*.css')
+    .src('./src/temp/sprite/css/**/*.css')
     // rename to partial `_sprites`
     .pipe(rename('_sprite.css'))
     // copy file and move copy to modules directory
@@ -54,12 +54,13 @@ gulp.task('copySpriteCSS', ['createSprite'], () =>
 
 
 gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], () =>
-  del('./src/temp/sprite')
+  del('./src/temp/sprite/**/*.*')
 );
 
 gulp.task('icons', [
   'beginClean',
   'createSprite',
   'copySpriteGraphic',
-  'copySpriteCSS'
+  'copySpriteCSS',
+  'endClean'
 ]);

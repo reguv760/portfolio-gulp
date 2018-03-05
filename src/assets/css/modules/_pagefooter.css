@@ -18,7 +18,8 @@
 
       li
       {
-        margin:1rem auto;
+        display:inline-block;
+        margin:1rem 0.25rem;
       }
 
       li a
@@ -33,6 +34,7 @@
         height:4rem;
       }
 
+      li a object:hover,
       li a img:hover
       {
         opacity:0.6;
