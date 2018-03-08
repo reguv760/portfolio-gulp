@@ -2,8 +2,11 @@ const gulp = require('gulp');
 const modernizr = require('gulp-modernizr');
 
 gulp.task('modernizr', () => gulp
-  .src(['./src/assets/styles/**/*.css', './src/assets/js/**/*.js'])
+  .src(['./src/assets/js/*.js'])
   .pipe(modernizr({
     options: ['setClasses']
   }))
-  .pipe(gulp.dest('./src/temp/scripts/')));
+
+  .pipe(gulp.dest('./dist/assets/js/')) //location for final build::
+  .pipe(gulp.dest('./src/assets/js/')) 
+ );

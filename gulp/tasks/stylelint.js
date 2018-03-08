@@ -8,9 +8,9 @@ const stylelint = require('stylelint');
 gulp.task('css-lint', () => {
   // Stylelint config rules
   const stylelintConfig = {
-    ignoreFiles: [
-      'src/assets/styles/modules/_sprite.css'
-    ],
+    // ignoreFiles: [
+    //   'src/assets/styles/modules/_sprite.css'
+    // ],
     rules: {
       'block-no-empty': true,
       'color-no-invalid-hex': true,
@@ -51,7 +51,7 @@ gulp.task('css-lint', () => {
 
   return gulp.src(
     // Stylesheet source:
-    ['./src/assets/styles/**/*.css',
+    ['./src/assets/css/**/*.css',
       // Ignore linting vendor assets:
       // (Useful if you have bower components)
       '!src/assets/styles/vendor/**/*.css'])

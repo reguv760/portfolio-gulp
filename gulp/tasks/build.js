@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, func-names */
 const gulp = require('gulp');
+const util = require('gulp-util');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const usemin = require('gulp-usemin');
@@ -7,6 +8,7 @@ const rev = require('gulp-rev');
 const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
+
 
 gulp.task('previewDist', () => {
   browserSync.init({
@@ -16,6 +18,7 @@ gulp.task('previewDist', () => {
     }
   });
 });
+
 gulp.task('deleteDistFolder', () => del('./dist'));
 
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
@@ -26,6 +29,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
     '!./src/assets/icons/**',
     '!./src/assets/css/**',
     '!./src/assets/js/**',
+    './src/assets/sprites/**',
     '!./src/temp/',
     '!./src/temp/**'
   ];
@@ -36,9 +40,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
 
 gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
   './src/assets/img/*',
-  './src/assets/img/**/*',
-  '!./src/assets/icons/',
-  '!./src/assets/icons/**/*'
+  './src/assets/img/**/*'
 ])
   .pipe(imagemin({
     progressive: true,
@@ -48,6 +50,19 @@ gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
 
   .pipe(gulp.dest('./dist/assets/img'))
 );
+
+gulp.task('copyOptimizeIcons', ['deleteDistFolder', 'optimizeImages'], () => gulp.src([
+  './src/assets/icons/*.svg'
+])
+  .pipe(imagemin({
+    progressive: true,
+    interlaced: true,
+    multipass: true
+  }))
+
+  .pipe(gulp.dest('./dist/assets/icons'))
+);
+
 
 gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
   .src('./src/index.html')
@@ -60,4 +75,4 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
   .pipe(gulp.dest('./dist'))
 );
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'usemin']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'copyOptimizeIcons', 'usemin']);
