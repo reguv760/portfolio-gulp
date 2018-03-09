@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, func-names */
 const gulp = require('gulp');
-const util = require('gulp-util');
+const gutil = require('gulp-util');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const usemin = require('gulp-usemin');
@@ -52,7 +52,8 @@ gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
 );
 
 gulp.task('copyOptimizeIcons', ['deleteDistFolder', 'optimizeImages'], () => gulp.src([
-  './src/assets/icons/*.svg'
+  './src/assets/icons/*.svg',
+  './src/assets/icons/*.png'
 ])
   .pipe(imagemin({
     progressive: true,
