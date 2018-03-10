@@ -2,9 +2,8 @@ window.onload = function()
 {
   const sideNav = document.getElementsByClassName('sidebar__nav')[0];
   const mobileNav = document.getElementsByClassName('mobileNav__links')[0];
-  sideNav.style.opacity = "0";
-  sideNav.style.left= "-10rem";
-  TweenMax.to(sideNav, 0.5, {opacity:1, left:0, ease:Bounce.easeOut});
+  sideNav.style.left= "-15rem";
+  TweenMax.to(sideNav, 0.6, {delay:0.25,left:0, ease:Bounce.easeOut});
 
   // mobileNav.style.opacity = "0";
   // mobileNav.style.top="-20rem";

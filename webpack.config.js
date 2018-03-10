@@ -26,7 +26,7 @@ module.exports = {
     Vendor: './src/assets/js/vendor.js'
   },
   output: {
-    path: path.join(__dirname, './src/assets/js'),
+    path: path.join(__dirname, './src/temp/js'),
     filename: '[name].js'
   },
   module: {

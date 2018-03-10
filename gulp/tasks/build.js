@@ -65,7 +65,7 @@ gulp.task('copyOptimizeIcons', ['deleteDistFolder', 'optimizeImages'], () => gul
 
 
 gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
-  .src('./src/index.html')
+  .src('./src/*.html')
   .pipe(usemin({
     css: [function () { return rev(); }, function () { return cssnano(); }],
     js: [function () { return rev(); }, function () {

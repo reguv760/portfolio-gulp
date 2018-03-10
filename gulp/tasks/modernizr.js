@@ -8,5 +8,5 @@ gulp.task('modernizr', () => gulp
   }))
 
   .pipe(gulp.dest('./dist/assets/js/')) //location for final build::
-  .pipe(gulp.dest('./src/assets/js/')) 
+  .pipe(gulp.dest('./src/temp/js/')) //location for dev:::
  );

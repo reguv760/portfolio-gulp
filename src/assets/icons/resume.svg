@@ -6,7 +6,7 @@
 	<style type="text/css">
 		svg { cursor:pointer; }
 	</style>
-	<polygon id="paper" fill="#33cf33" points="100,64 100,376.999 150,436 400,436 400,64 "/>
+	<polygon id="paper" fill="#666" points="100,64 100,376.999 150,436 400,436 400,64 "/>
 	<polygon id="lines" points="155,433 105,374 155,374 "/>
 	<g>
 		<rect x="130" y="118" fill="#030303" width="242" height="4"/>
