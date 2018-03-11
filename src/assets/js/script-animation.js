@@ -36,33 +36,29 @@ window.onload = function()
   for (var i = 0; i < portOverlay.length; i++ )
   {
     //console.log(i);
-    //portOverlay[i].style.top = "-80rem";
     portOverlay[i].style.opacity = 0;
 
     portOverlay[i].addEventListener("mouseenter", function( event ) 
     {     
       var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
-      //console.log(textContainer);
-      textContainer.style.transform = "scaleX(0)";
 
-      //TweenMax.to(event.target, 0.25, {opacity:1, ease:Power1.easeOut});
-      TweenMax.to(event.target, 0.2, {opacity:1, ease:Power1.easeOut});
-      TweenMax.to(textContainer, 0.2, {scaleX:1, delay:0.1, transformOrigin:"50% 50%", ease:Power1.easeOut});   
+      TweenMax.to(event.target, 0.25, {opacity:1, onStart: scaleTextContainer, ease:Power2.easeOut});
+      TweenMax.to(textContainer, 0.3, {scaleX:1, delay:0.2, transformOrigin:"50% 50%", ease:Power2.easeOut});
+
+      function scaleTextContainer()
+      {
+        textContainer.style.transform = "scaleX(0)";
+      }
     });
 
     portOverlay[i].addEventListener("mouseleave", function( event ) 
     {
       var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
       TweenMax.to(event.target, 0.25, {opacity:0, ease:Power1.easeOut});
-      TweenMax.to(textContainer, 0.2, {scaleX:0, transformOrigin:"50% 50%", ease:Power1.easeOut});
+      TweenMax.to(textContainer, 0.2, {scaleX:0, ease:Power1.easeOut});
     });   
-    //portImage[i].mouseover(hoverPortImage);
   }
 
-  //const portImage = document.getElementsByClassName('portfolio__website-container--hero');
-  //portImage.hover
-  
-  //portOverlay.style.opacity = "0";
   console.log(portOverlayCount);
 
   lazyload();

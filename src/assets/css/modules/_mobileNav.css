@@ -49,7 +49,10 @@
   	  margin:0 auto 1rem auto;
 
       & li
-      {
+      {        
+        /* centers both icons + p */
+        display:flex;
+        justify-content: center;
       	margin:0.5rem auto;
       	height:6rem;
       }
@@ -62,14 +65,13 @@
       & li object,
       & li img
       {
-      	margin:0 auto 0.5rem auto;
         width:6rem;
         height:6rem;
 
         @mixin atSmall
         {
-          width:4rem;
-      		height:4rem;
+          width:4.5rem;
+      		height:4.5rem;
         }
       }
 
@@ -93,11 +95,12 @@
         text-decoration: none;
         color:$off-black;
         font-size: 1.4rem;
+        font-weight: 500;
         letter-spacing: 0.0125em;
 
         @mixin atSmall
         {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
     }
 

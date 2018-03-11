@@ -23,6 +23,11 @@
     }
   }
 
+  & dropShadow
+  {
+    filter:drop-shadow(1px 1px 1px rgba(0,0,0, 0.5));
+  }
+
   /* used for website items */
   &__website
   {
@@ -39,7 +44,6 @@
 
   &__website img
   {
-  	border-radius: 0.25rem;
   	filter:drop-shadow(1px 1px 1px rgba(0,0,0, 0.5));
   }
 
@@ -52,6 +56,7 @@
     li
     {
     	margin:1rem;
+      padding:0;
     }
 
     /* used by websites with hero + smaller images */
@@ -59,7 +64,6 @@
     {
       width:100%;
       position:relative;
-      overflow: hidden;
 
       @mixin atSmall
       {
@@ -98,7 +102,6 @@
     &--fullWidth
     {
       position:relative;
-      overflow: hidden;
       width:100%;
     }
   }
@@ -119,7 +122,6 @@
 
   &__gallery img
   {
-    border-radius: 0.25rem;
     filter:drop-shadow(1px 1px 1px rgba(0,0,0, 0.5));
   }
 
@@ -134,7 +136,8 @@
 
     li
     {
-    	margin:1rem;     
+    	margin:1rem;
+      padding:0;  
     }
 
     /* used by websites with hero + smaller images */
@@ -142,7 +145,6 @@
     {
       width:100%;
       position: relative;
-      overflow: hidden;
 
       @mixin atSmall
       {
@@ -223,13 +225,15 @@
         @mixin atTablet
         {
           font-size:1.8rem;
-          line-height: 2rem;
+          line-height: 2.1rem; 
+          padding:0 3.5rem;
         }
+
         @mixin atSmall
         {
           font-size:1.4rem;
-          line-height:1.6rem;
-          padding:0 3.5rem;
+          line-height:1.75rem;
+          padding:0 2.5rem;
         }
       }
     }
@@ -240,25 +244,26 @@
   {
   	cursor: pointer;
     position:relative;
-    top:1rem;
+    top:0.75rem; /* to adjust link inside of --hero */
 
-    a
+    & a
     {
       color:$off-white;
-      font-size:1.6rem;
+      font-size:1.4rem;
+      font-weight: 500;
       text-decoration: none;
       letter-spacing: 0.025em;
-      padding:1rem;
+      padding:0.75rem;
       background-color: $darkGreen;
       border-radius: 0.5rem;
 
       @mixin atSmall
       {
-        font-size:1.4rem;
+        font-size:1.3rem;
       }
     }
 
-    a:hover
+    & a:hover
     {
       background-color:$neonGreen;
     }

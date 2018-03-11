@@ -13,19 +13,19 @@ body
 	font-size:1.6rem;
 	background-color: $off-black;
 
-  display:grid;
-  grid-template-columns: 20rem 1fr 1fr 1fr;
-  grid-template-areas:
-      "mobileNav 	mobileNav 	mobileNav    mobileNav"
-      "leftCol 	 	rightCol 	rightCol     rightCol";
+	display:grid;
+	grid-template-columns: 20rem 1fr 1fr 1fr;
+	grid-template-areas:
+	  "mobileNav 	mobileNav 	mobileNav    mobileNav"
+	  "leftCol 	 	rightCol 	rightCol     rightCol";
 
 	@mixin atTablet
 	{
 		grid-template-columns: 100%;
 		grid-template-rows: 15rem 1fr;
-   		grid-template-areas:
+		grid-template-areas:
 			"mobileNav 	mobileNav 	mobileNav 	mobileNav"
-      		"rightCol 	rightCol 	rightCol 	rightCol";
+			"rightCol 	rightCol 	rightCol 	rightCol";
 	}
 
 	@mixin atSmall
