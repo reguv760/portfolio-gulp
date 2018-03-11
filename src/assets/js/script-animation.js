@@ -1,17 +1,17 @@
+const sideNav = document.getElementsByClassName('sidebar__nav')[0]; ;
+const mobileNav = document.getElementsByClassName('mobileNav__links')[0];;
+const portOverlay = document.getElementsByClassName('portfolio__overlay'); 
+
 window.onload = function()
 {
   //init sideNav animation:::
-  const sideNav = document.getElementsByClassName('sidebar__nav')[0];
-  //const sideNavFooter = document.getElementsByClassName('sidebar__footer')[0];
-  const mobileNav = document.getElementsByClassName('mobileNav__links')[0];
+  //const sideNavFooter = document.getElementsByClassName('sidebar__footer')[0];  
   //sideNavFooter.style.opacity = "0";
   //sideNavFooter.style.bottom     = "1.25rem"
   sideNav.style.left          = "-15rem";
-
   TweenMax.to(sideNav, 0.6, {delay:0.25,left:0, ease:Bounce.easeOut});
 
   //define portOverlay functionality:::
-  const portOverlay = document.getElementsByClassName('portfolio__overlay'); 
   
   for (var i = 0; i < portOverlay.length; i++ )
   {

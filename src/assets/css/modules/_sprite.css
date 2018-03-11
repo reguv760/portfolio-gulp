@@ -1,41 +1,51 @@
     .icon {
-      background-image: url('./assets/sprites/sprite-df55451a.svg');
+      background-image: url('../sprites/sprite-825fdee1.svg');
     }
 
   .icon--about {
     width: 502px;
     height: 502px;
-    background-position: 0 0;
+    background-position: 12.101910828025478% 39.683860232945094%;
   }
 
   .icon--experiment {
     width: 502px;
     height: 502px;
-    background-position: 50% 0;
+    background-position: 60.031847133757964% 0;
   }
 
   .icon--github {
     width: 502px;
     height: 502px;
-    background-position: 0 100%;
+    background-position: 60.031847133757964% 41.76372712146423%;
   }
 
   .icon--linkedIn {
     width: 502px;
     height: 502px;
-    background-position: 50% 100%;
+    background-position: 100% 0;
   }
 
   .icon--portfolio {
     width: 502px;
     height: 502px;
-    background-position: 100% 0;
-    
-    fill: #ccc;
+    background-position: 100% 41.76372712146423%;
   }
 
   .icon--resume {
     width: 502px;
     height: 502px;
-    background-position: 100% 100%;
+    background-position: 0 100%;
+  }
+
+  .icon--rg-logo {
+    width: 602px;
+    height: 477px;
+    background-position: 13.14878892733564% 0;
+  }
+
+  .icon--rg-logoGlyph {
+    width: 152px;
+    height: 1202px;
+    background-position: 0 0;
   }

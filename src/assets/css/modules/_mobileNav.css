@@ -10,7 +10,6 @@
     width:100%;
     
    
-    
     @mixin atTablet
     {
       display: flex;
@@ -18,14 +17,24 @@
 
     &__logo
     {
-        height:12.5rem;
-        width:15rem;
+        height:15rem;
+        width:18rem;
         /* background-color:$off-black; */
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        & object 
+        {
+          padding:1rem;
+          width:75%;
+          height:75%;
+        }
 
         @mixin atTablet
         {
-          height:15rem;
-          width:18rem;
+          height:12.5rem;
+          width:15rem;
         }
 
         @mixin atSmall
@@ -54,7 +63,7 @@
         display:flex;
         justify-content: center;
       	margin:0.5rem auto;
-      	height:6rem;
+      	height:6rem;      
       }
 
       & li p
@@ -78,10 +87,6 @@
           width:4.5rem;
       		height:4.5rem;
         }
-      }
-
-      & svg path {
-          fill: $off-white;
       }
 
       & .active_link p

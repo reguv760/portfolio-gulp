@@ -68,7 +68,7 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
   .src('./src/*.html')
   .pipe(usemin({
     css: [function () { return rev(); }, function () { return cssnano(); }],
-    js: [function() {return rev()}, function(){return uglify()}]
+    js: [function() {return uglify()}, function(){return rev()}]
     // scripts: [function () { return rev(); }, function () {
     //   return uglify(); }]
     //scripts: [uglify().on('error', function(err) {gutil.log(gutil.colors.red('[Error]'), err.toString());this.emit('end');}),rev()]

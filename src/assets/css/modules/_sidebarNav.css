@@ -4,8 +4,13 @@
   grid-area:leftCol;
   height:100vh;
   width:20rem;
-  background-color:$off-black;
+  background-color:$off-white;
   position:fixed;
+
+  background:url("../assets/img/rg-logoGlyph.svg"); /* make sure bg exist in temp */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center;*/
 
   @mixin atTablet
   {
@@ -17,6 +22,17 @@
     width:100%;
     height:15rem;
     margin:0 0 1rem 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+    & object 
+    {
+      width:75%;
+      height:75%;
+    }
+
   }
 
   /* side bar footer */
