@@ -24,7 +24,7 @@
 
       li a
       {
-        text-decoration: none;
+        text-decoration: none;        
       }
 
       li a object,
@@ -34,8 +34,8 @@
         height:4rem;
       }
 
-      li a object:hover,
-      li a img:hover
+      li a:hover,
+      li a:hover
       {
         opacity:0.6;
       }

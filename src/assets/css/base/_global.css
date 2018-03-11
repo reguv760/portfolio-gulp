@@ -46,3 +46,22 @@ img
 img:not([src]) {
     visibility: hidden;
 }
+
+ /* make SVG icons clickable */
+ /* used by sidebarNav, pagefooter and mobileNav */
+a.svg
+{
+  position: relative;
+  display: inline-block; 
+}
+
+a.svg:after 
+{
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;      
+}
+/* --------------- */

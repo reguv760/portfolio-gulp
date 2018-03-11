@@ -5,8 +5,6 @@
 <style type="text/css">
 	.st0{fill:#027BB5;}
 	.st1{fill:#FFFFFF;}
-
-	svg { cursor:pointer; }
 </style>
 <rect x="32" y="31.3" class="st0" width="436.2" height="436.2"/>
 <path class="st1" d="M106.6,199.7h61.5v197.7h-61.5V199.7z M137.4,101.4c19.7,0,35.6,16,35.6,35.6c0,19.7-16,35.6-35.6,35.6

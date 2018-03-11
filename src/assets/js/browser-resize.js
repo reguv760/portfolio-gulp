@@ -21,7 +21,7 @@ window.onresize = function()
 	{
 		mobileNav.style.display = "flex";
 		mobileNav.style.top = "-25rem";	
-		TweenMax.to(mobileNav, 0.5, {top:0, ease:Back.easeOut.config(1.5)});
+		TweenMax.to(mobileNav, 0.5, {top:0, ease:Back.easeOut.config(1.2)});
 
 	} else 
   	if (getWidth() > 799)

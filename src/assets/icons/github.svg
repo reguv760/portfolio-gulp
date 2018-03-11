@@ -3,9 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"  id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
-	 <style>
- 		svg { cursor: pointer; }
- 	</style>
+
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#4078c0" d="M250.003,39.487c-119.191,0-215.843,96.631-215.843,215.839
 			c0,95.368,61.844,176.27,147.605,204.815c10.786,1.997,14.747-4.684,14.747-10.388c0-5.145-0.198-22.149-0.293-40.183

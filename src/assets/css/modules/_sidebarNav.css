@@ -71,8 +71,8 @@
           height:3.5rem;
       }
 
-      li a img:hover,
-      li a object:hover
+      li a:hover,
+      li a:hover
       {
         opacity: 0.6;
       }
