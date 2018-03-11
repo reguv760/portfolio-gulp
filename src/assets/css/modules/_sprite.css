@@ -30,6 +30,8 @@
     width: 502px;
     height: 502px;
     background-position: 100% 0;
+    
+    fill: #ccc;
   }
 
   .icon--resume {

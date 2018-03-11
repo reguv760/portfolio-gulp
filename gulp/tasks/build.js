@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, func-names */
 const gulp = require('gulp');
-const util = require('gulp-util');
+const gutil = require('gulp-util');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const usemin = require('gulp-usemin');
@@ -68,9 +68,10 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
   .src('./src/*.html')
   .pipe(usemin({
     css: [function () { return rev(); }, function () { return cssnano(); }],
-    js: [function () { return rev(); }, function () {
-      return uglify();
-    }]
+    js: [function() {return rev()}, function(){return uglify()}]
+    // scripts: [function () { return rev(); }, function () {
+    //   return uglify(); }]
+    //scripts: [uglify().on('error', function(err) {gutil.log(gutil.colors.red('[Error]'), err.toString());this.emit('end');}),rev()]
   }))
   .pipe(gulp.dest('./dist'))
 );

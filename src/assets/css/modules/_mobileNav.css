@@ -68,11 +68,20 @@
         width:6rem;
         height:6rem;
 
+/*        g
+        {
+          fill:$off-white;
+        }*/
+
         @mixin atSmall
         {
           width:4.5rem;
       		height:4.5rem;
         }
+      }
+
+      & svg path {
+          fill: $off-white;
       }
 
       & .active_link p
