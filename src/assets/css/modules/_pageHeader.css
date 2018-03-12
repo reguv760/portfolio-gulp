@@ -2,7 +2,7 @@
 {
   grid-area:rightCol;
   width:100%;
-  background-color: $off-black;
+  background-color: $grey-black;
 
   & header
   {
@@ -10,13 +10,13 @@
      align-items: center;
      width:100%;
      min-height: 15rem;
-     background-color: $off-black;
+     background-color: $grey-black;
   }
 
   & section
   {
     width:100%;
-    background-color: $off-black;
+    background-color: $grey-black;
   }
 
   &__header

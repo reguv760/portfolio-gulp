@@ -3,12 +3,14 @@
     display:none;
     flex-flow: row nowrap;
     grid-area: mobileNav;
-    background-color:$off-black;
     justify-content: space-around;
     position: fixed;
     z-index: 1000;
     width:100%;
-    
+
+    background: $off-black url("../assets/img/rg-logoGlyph2.svg"); /* make sure bg exist in temp */
+    background-size: cover;
+    background-repeat: no-repeat;
    
     @mixin atTablet
     {
@@ -18,29 +20,22 @@
     &__logo
     {
         height:15rem;
-        width:18rem;
-        /* background-color:$off-black; */
+        width:20rem;
+        /*background-color:$off-white; */
         display:flex;
         justify-content: center;
         align-items: center;
 
-        & object 
+        & object,
+        & img
         {
-          padding:1rem;
-          width:75%;
-          height:75%;
-        }
-
-        @mixin atTablet
-        {
-          height:12.5rem;
-          width:15rem;
+          margin:2rem;
         }
 
         @mixin atSmall
         {
-          width:12rem;
-          height:10rem;
+          height:15rem;
+          width:18rem;
         }
     }
 
@@ -77,11 +72,6 @@
         width:6rem;
         height:6rem;
 
-/*        g
-        {
-          fill:$off-white;
-        }*/
-
         @mixin atSmall
         {
           width:4.5rem;
@@ -99,7 +89,7 @@
         flex-flow: row nowrap;
     		justify-content: space-around;
     	  margin:0 auto ;
-        width:60%;
+        /*width:60%;*/
       }
     }
 

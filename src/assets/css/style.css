@@ -7,8 +7,8 @@
 @import 'base/_mixins.css';
 @import 'base/_global.css';
 
-/* svg 
-@import 'modules/_sprite.css'; */
+/* svg */
+@import 'modules/_sprite.css';
 
 @import 'modules/_sidebarNav.css';
 @import 'modules/_mobileNav.css';

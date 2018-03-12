@@ -7,6 +7,7 @@ container pagination
 	justify-content: center;
 	align-items: center;
 	margin:2rem auto;
+  background-color: $grey-black;
 
   &__container
   {
@@ -41,6 +42,11 @@ container pagination
     {
       color:$brightGreen;
     }
+
+    /*& li a.active_link:before
+    {
+      content:"> ";
+    }*/
 
     li::after
     {

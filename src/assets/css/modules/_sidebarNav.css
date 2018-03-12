@@ -4,10 +4,10 @@
   grid-area:leftCol;
   height:100vh;
   width:20rem;
-  background-color:$off-white;
   position:fixed;
 
-  background:url("../assets/img/rg-logoGlyph.svg"); /* make sure bg exist in temp */
+  
+  background:$off-black url("../assets/img/rg-logoGlyph.svg"); /* make sure bg exist in temp */
   background-size: cover;
   background-repeat: no-repeat;
   /*background-position: center;*/
@@ -27,13 +27,12 @@
     align-items: center;
 
 
-    & object
+    & object,
+    & img
     {
       width:75%;
       height:75%;
     }
-
-
   }
 
   /* side bar footer */
