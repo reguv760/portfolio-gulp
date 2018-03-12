@@ -38,10 +38,12 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
+// gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
+gulp.task('optimizeImages', ['deleteDistFolder'], () => gulp.src([
   './src/assets/img/*',
   './src/assets/img/**/*'
-])
+  ])
+
   .pipe(imagemin({
     progressive: true,
     interlaced: true,

@@ -27,11 +27,12 @@
     align-items: center;
 
 
-    & object 
+    & object
     {
       width:75%;
       height:75%;
     }
+
 
   }
 
