@@ -18,32 +18,37 @@ window.onload = function()
     //console.log(i);
     portOverlay[i].style.opacity = "0";
 
-    portOverlay[i].addEventListener("mouseenter", function( event ) 
-    {     
-      var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
+    portOverlay[i].addEventListener("mouseenter", overlayOn );
+    portOverlay[i].addEventListener("mouseleave", overlayOff );
 
-      TweenMax.killTweensOf(event.target);
+    //portOverlay[i].addEventListener("touchenter", overlayOn );
+    //portOverlay[i].addEventListener("touchleave", overlayOff );
+  }
+
+  function overlayOn(e)
+  {
+    var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
+
+      TweenMax.killTweensOf(e.target);
       TweenMax.killTweensOf(textContainer);
 
       textContainer.style.top = "20%";
       textContainer.style.transform = "scaleX(0)";
 
       
-      TweenMax.to(event.target, 0.25, {opacity:1, ease:Power2.easeOut});
+      TweenMax.to(e.target, 0.25, {opacity:1, ease:Power2.easeOut});
       TweenMax.to(textContainer, 0.3, {scaleX:1, top:0, delay:0.2, transformOrigin:"50% 50%", ease:Circ.easeOut});
+  }
 
-    });
+  function overlayOff(e)
+  {
+    var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
 
-    portOverlay[i].addEventListener("mouseleave", function( event ) 
-    {
-      var textContainer = this.getElementsByClassName("portfolio__overlay-container")[0];
+    TweenMax.killTweensOf(e.target);
+    TweenMax.killTweensOf(textContainer);
 
-      TweenMax.killTweensOf(event.target);
-      TweenMax.killTweensOf(textContainer);
-
-      TweenMax.to(event.target, 0.25, {opacity:0, ease:Power1.easeOut});
-      TweenMax.to(textContainer, 0.25, {scaleX:0, ease:Power1.easeOut});
-    });   
+    TweenMax.to(e.target, 0.25, {opacity:0, ease:Power1.easeOut});
+    TweenMax.to(textContainer, 0.25, {scaleX:0, ease:Power1.easeOut});
   }
 
   //init lazyload images:::
