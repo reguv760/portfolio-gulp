@@ -1,6 +1,6 @@
 # global context
 [build]
-  publish = "dist"
+  publish = "dist/"
   command = "gulp build"
 
 # build a preview (optional)
