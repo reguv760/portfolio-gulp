@@ -10,18 +10,18 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
 
-gulp.task('previewDist', () => {
+gulp.task('previewdocs', () => {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: 'dist'
+      baseDir: 'docs'
     }
   });
 });
 
-gulp.task('deleteDistFolder', () => del('./dist'));
+gulp.task('deletedocsFolder', () => del('./docs'));
 
-gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
+gulp.task('copyGeneralFiles', ['deletedocsFolder'], () => {
   const pathsToCopy = [
     './src/**/*',
     './src/*.html',
@@ -29,16 +29,15 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
     '!./src/assets/icons/**',
     '!./src/assets/css/**',
     '!./src/assets/js/**',
-    './src/assets/sprites/**',
     '!./src/temp/',
     '!./src/temp/**'
   ];
 
   return gulp.src(pathsToCopy)
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
+gulp.task('optimizeImages', ['deletedocsFolder', 'icons'], () => gulp.src([
   './src/assets/img/*',
   './src/assets/img/**/*'
 ])
@@ -48,10 +47,10 @@ gulp.task('optimizeImages', ['deleteDistFolder', 'icons'], () => gulp.src([
     multipass: true
   }))
 
-  .pipe(gulp.dest('./dist/assets/img'))
+  .pipe(gulp.dest('./docs/assets/img'))
 );
 
-gulp.task('copyOptimizeIcons', ['deleteDistFolder', 'optimizeImages'], () => gulp.src([
+gulp.task('copyOptimizeIcons', ['deletedocsFolder', 'optimizeImages'], () => gulp.src([
   './src/assets/icons/*.svg'
 ])
   .pipe(imagemin({
@@ -60,11 +59,11 @@ gulp.task('copyOptimizeIcons', ['deleteDistFolder', 'optimizeImages'], () => gul
     multipass: true
   }))
 
-  .pipe(gulp.dest('./dist/assets/icons'))
+  .pipe(gulp.dest('./docs/assets/icons'))
 );
 
 
-gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
+gulp.task('usemin', ['deletedocsFolder', 'styles', 'scripts'], () => gulp
   .src('./src/*.html')
   .pipe(usemin({
     css: [function () { return rev(); }, function () { return cssnano(); }],
@@ -73,7 +72,7 @@ gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], () => gulp
     //   return uglify(); }]
     //scripts: [uglify().on('error', function(err) {gutil.log(gutil.colors.red('[Error]'), err.toString());this.emit('end');}),rev()]
   }))
-  .pipe(gulp.dest('./dist'))
+  .pipe(gulp.dest('./docs'))
 );
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'copyOptimizeIcons', 'usemin']);
+gulp.task('build', ['deletedocsFolder', 'copyGeneralFiles', 'optimizeImages', 'copyOptimizeIcons', 'usemin']);

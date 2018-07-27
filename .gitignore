@@ -11,3 +11,4 @@ dist
 # Adobe Files
 *.ai
 *.psd
+*.toml
