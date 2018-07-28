@@ -6,11 +6,16 @@
 
   & header
   {
-     display:flex;
+     display:none;
      align-items: center;
      width:100%;
      min-height: 15rem;
      background-color: $off-black;
+
+     @mixin atTablet
+     {
+      display:flex;
+     }
   }
 
   & section

@@ -124,4 +124,32 @@
     	color:$neonGreen;
     }
   }
+
+  /* sidebar header */
+  &__header
+  {    
+    font-size:1.4rem;
+    line-height:1.4em;
+    color:$subtleWhite;
+    width:75%;
+    margin:0 auto;
+
+    & p
+    {
+      margin:2rem 0;
+    }
+
+    & a
+    {
+      font-family: 'Ubuntu Mono', monospace;
+      letter-spacing: 0.0125em;
+      color:$darkGreen;
+      text-decoration: none;
+    }
+
+    & a:hover
+    {
+      color:$darkGrey;
+    }
+  }
 }

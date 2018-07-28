@@ -7,6 +7,7 @@
 
 @define-mixin atTablet
 {
+  /* only display if browser width is less than */
   @media (max-width: 799px) {
     @mixin-content;
   }
