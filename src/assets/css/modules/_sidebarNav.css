@@ -7,7 +7,7 @@
   background-color:$off-white;
   position:fixed;
 
-  background:url("../assets/img/rg-logoGlyph.svg"); /* make sure bg exist in temp */
+  background:url("../assets/img/rg-logoGlyph.png"); /* make sure bg exist in temp */
   background-size: cover;
   background-repeat: no-repeat;
   /*background-position: center;*/
