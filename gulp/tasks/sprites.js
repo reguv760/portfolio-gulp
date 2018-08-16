@@ -40,7 +40,7 @@ gulp.task('copySpriteGraphic', ['createSprite'], () =>
   gulp
     .src('./src/temp/sprites/css/*.{svg,png}')
     .pipe(gulp.dest('./src/assets/sprites/'))    
-    .pipe(gulp.dest('./dist/assets/sprites/'))
+    .pipe(gulp.dest('./docs/assets/sprites/'))
 );
 
 gulp.task('copySpriteCSS', ['copySpriteGraphic'], () =>

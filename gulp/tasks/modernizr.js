@@ -7,6 +7,6 @@ gulp.task('modernizr', () => gulp
     options: ['setClasses']
   }))
 
-  .pipe(gulp.dest('./dist/assets/js/')) //location for final build::
+  .pipe(gulp.dest('./docs/assets/js/')) //location for final build::
   .pipe(gulp.dest('./src/temp/js/')) //location for dev:::
  );
