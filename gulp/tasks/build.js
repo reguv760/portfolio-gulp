@@ -26,7 +26,7 @@ gulp.task('copyGeneralFiles', ['deletedocsFolder'], () => {
     './src/**/*',
     './src/*.html',
     '!./src/assets/img/**',
-    '!./src/assets/icons/**',
+    '!./src/assets/icons/**',    
     '!./src/assets/css/**',
     '!./src/assets/js/**',
     '!./src/temp/',
