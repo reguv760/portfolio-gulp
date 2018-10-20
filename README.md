@@ -30,3 +30,8 @@ ES5
 * imagemin (optimize your images)
 * CSS sprites (generated using handlebars)
 * Stylelint - great way to check that your CSS is valid
+
+## INSTALLATION
+* In termninal, run `npm install`
+* then `gulp styles` to create style.css
+* `gulp watch` to view site locally
